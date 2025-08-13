@@ -36,7 +36,7 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ reply });
     } catch (error: unknown) {
-        const e = error as any;
+        const e = error as Error;
         console.error("Server error:", e);
         return NextResponse.json(
             { error: "Internal Server Error", details: e.message },
