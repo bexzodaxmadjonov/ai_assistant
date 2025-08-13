@@ -35,10 +35,11 @@ export async function POST(req: Request) {
         const reply = result?.choices?.[0]?.message?.content || "No response generated.";
 
         return NextResponse.json({ reply });
-    } catch (error: any) {
-        console.error("Server error:", error);
+    } catch (error: unknown) {
+        const e = error as any;
+        console.error("Server error:", e);
         return NextResponse.json(
-            { error: "Internal Server Error", details: error.message },
+            { error: "Internal Server Error", details: e.message },
             { status: 500 }
         );
     }

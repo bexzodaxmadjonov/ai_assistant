@@ -152,7 +152,7 @@ export default function ModernChat() {
                         </div>
                         <h3 className="text-lg font-medium text-gray-900 mb-2 animate-slide-in-up">Start a conversation</h3>
                         <p className="text-gray-500 max-w-sm animate-slide-in-up [animation-delay:0.2s]">
-                            Ask me anything! I'm here to help with questions, creative tasks, or just to chat.
+                            Ask me anything! I&apos;m here to help with questions, creative tasks, or just to chat.
                         </p>
                         <div className="mt-4 flex gap-2">
                             <Sparkles className="w-4 h-4 text-blue-400 animate-spin-slow" />
